@@ -8,7 +8,6 @@ import page.HomePage;
 import service.UserCreator;
 import model.User;
 import service.ItemCreator;
-import page.CatalogPage;
 
 public class SistersTest extends CommonConditions{
     public static final String HOMEPAGE_URL = "https://sisters.by/";
@@ -112,5 +111,14 @@ public class SistersTest extends CommonConditions{
                 .Enter()
                 .checkInvalidLoginAndPasswordInAuthorization();
         Assert.assertEquals(invalidUserLogin,"Пользователь с таким логином не зарегистирован");
+    }
+    @Test
+    public void checkCorrectTemplateSearchingTest(){
+        String template = new HomePage(driver)
+                .openPage(HOMEPAGE_URL)
+                .inputInSearchString("атье");
+        boolean checkTemplate = new HomePage(driver)
+                .checkCorrectSearching(template);
+        Assert.assertTrue(checkTemplate);
     }
 }

@@ -8,7 +8,6 @@ import org.openqa.selenium.edge.EdgeDriver;
 public class DriverSingleton {
     private static WebDriver driver;
     private DriverSingleton(){
-
     }
     public static WebDriver getDriver() {
         if (driver == null) {
@@ -25,7 +24,6 @@ public class DriverSingleton {
         }
         return driver;
     }
-
     public static void deleteAllCookies(){
         driver.manage().deleteAllCookies();
     }

@@ -26,41 +26,33 @@ public class Item {
     public String getItemName() {
         return name;
     }
-
     public void setItemName(String name) {
         this.name = name;
     }
-
-
     public double getItemCost() {
         return cost;
     }
-
     public void setItemCost(double cost) {
         this.cost = cost;
     }
     public String getItemUrl() {
         return url;
     }
-
     public void setItemUrl(String url) {
         this.url = url;
     }
     public String getItemSize() {
         return size;
     }
-
     public void setItemSize(String size) {
         this.size = size;
     }
     public String getItemCount() {
         return count;
     }
-
     public void setItemCount(String count) {
         this.count = count;
     }
-
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;

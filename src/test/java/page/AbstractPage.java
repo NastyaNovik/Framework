@@ -15,7 +15,6 @@ public abstract class AbstractPage {
         this.driver = driver;
         PageFactory.initElements(driver, this);
     }
-
     public WebElement waitUntilVisibilityOf(WebElement element) {
         return new WebDriverWait(driver, WAIT_TIMEOUT_SECONDS)
                 .until(ExpectedConditions.visibilityOf(element));
@@ -28,9 +27,5 @@ public abstract class AbstractPage {
     public WebElement waitUntilElementIsClickable(By location){
         return new WebDriverWait(driver, WAIT_TIMEOUT_SECONDS)
                 .until(ExpectedConditions.elementToBeClickable(location));
-    }
-    public void waitUntilFieldIsChanged(WebElement element, String startValue) {
-        new WebDriverWait(driver, WAIT_TIMEOUT_SECONDS)
-                .until(ExpectedConditions.not(ExpectedConditions.textToBePresentInElement(element, startValue)));
     }
 }
