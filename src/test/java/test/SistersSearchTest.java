@@ -8,7 +8,7 @@ public class SistersSearchTest extends CommonConditions{
     public static final String HOMEPAGE_URL = "https://sisters.by/";
 
     @Test
-    public void checkCorrectTemplateSearchingTest(){
+    public void checkCorrectTemplateSearchingTest() throws InterruptedException {
         String template = new HomePage(driver)
                 .openPage(HOMEPAGE_URL)
                 .inputInSearchString("атье");

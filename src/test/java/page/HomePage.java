@@ -1,8 +1,5 @@
 package page;
-import org.openqa.selenium.By;
-import org.openqa.selenium.Keys;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
+import org.openqa.selenium.*;
 import org.openqa.selenium.support.FindBy;
 public class HomePage extends AbstractPage{
 
@@ -50,7 +47,8 @@ public class HomePage extends AbstractPage{
         WebElement invalidLoginString = driver.findElements(By.xpath("//*[@id=\"_error-message\"]")).get(2);
         return invalidLoginString.getText();
     }
-    public String inputInSearchString(String searchItem){
+    public String inputInSearchString(String searchItem) throws InterruptedException {
+        Thread.sleep(1000);
         waitUntilElementIsClickable(searchString).click();
         waitUntilVisibilityOf(searchString).sendKeys(searchItem);
         searchString.sendKeys(Keys.ENTER);

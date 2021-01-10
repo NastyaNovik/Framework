@@ -39,5 +39,4 @@ public class CatalogPage  extends AbstractPage{
         return Double.parseDouble(firstPrice.getText().replaceAll("\\s+",""))<=Double.parseDouble(secondPrice.getText().replaceAll("\\s+",""))&&Double.parseDouble(secondPrice.getText().replaceAll("\\s+",""))<=
                 Double.parseDouble(thirdPrice.getText().replaceAll("\\s+",""));
     }
-
 }
