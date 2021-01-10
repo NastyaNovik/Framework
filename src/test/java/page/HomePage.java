@@ -54,7 +54,7 @@ public class HomePage extends AbstractPage{
         waitUntilElementIsClickable(searchString).click();
         waitUntilVisibilityOf(searchString).sendKeys(searchItem);
         searchString.sendKeys(Keys.ENTER);
-        return searchItem;
+        return searchString.getText();
     }
     public boolean checkCorrectSearching(String searchItem){
         return nameOfItemInCatalog.getText().contains(searchItem);

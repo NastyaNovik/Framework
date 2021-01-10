@@ -112,13 +112,4 @@ public class SistersTest extends CommonConditions{
                 .checkInvalidLoginAndPasswordInAuthorization();
         Assert.assertEquals(invalidUserLogin,"Пользователь с таким логином не зарегистирован");
     }
-    @Test
-    public void checkCorrectTemplateSearchingTest(){
-        String template = new HomePage(driver)
-                .openPage(HOMEPAGE_URL)
-                .inputInSearchString("атье");
-        boolean checkTemplate = new HomePage(driver)
-                .checkCorrectSearching(template);
-        Assert.assertTrue(checkTemplate);
-    }
 }
