@@ -5,7 +5,7 @@
     <test name="smoke">
         <classes>
             <class name="test.SistersFilterTest"/>
-            <class name="test.SistersSearchTest"/>
+            <class name="test.SistersTest"/>
         </classes>
     </test>
 </suite>
