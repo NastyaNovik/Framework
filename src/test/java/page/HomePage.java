@@ -17,7 +17,7 @@ public class HomePage extends AbstractPage{
     private WebElement inputPassword;
     @FindBy(xpath = " //*[@id=\"enter\"]/div/form/input")
     private WebElement enterButton;
-    @FindBy(xpath = " //input[@class=\"b-header-search\"]")
+    @FindBy(name = "q")
     private WebElement searchString;
     @FindBy(xpath = " //*[@id=\"items-place\"]/div[1]/article/a[2]/span[3]")
     private WebElement nameOfItemInCatalog;
