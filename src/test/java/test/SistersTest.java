@@ -119,7 +119,15 @@ public class SistersTest extends CommonConditions{
         boolean correctCheck = new CatalogPage(driver)
                 .openPage(CATALOG_PAGE_URL)
                 .sortByDescendingPrice()
-                .checkCorrectSorting();
+                .checkCorrectSortingDescending();
+        Assert.assertTrue(correctCheck);
+    }
+    @Test
+    public void checkSortByAscendingPriceTest(){
+        boolean correctCheck = new CatalogPage(driver)
+                .openPage(CATALOG_PAGE_URL)
+                .sortByAscendingPrice()
+                .checkCorrectSortingAscending();
         Assert.assertTrue(correctCheck);
     }
 }
