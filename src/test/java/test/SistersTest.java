@@ -12,7 +12,6 @@ import page.CatalogPage;
 
 public class SistersTest extends CommonConditions{
     public static final String HOMEPAGE_URL = "https://sisters.by/";
-    public static final String CATALOG_PAGE_URL = "https://sisters.by/catalog";
     Item expectedItem = ItemCreator.withCredentialsFromProperty("first");
     Item expectedFirstItem = ItemCreator.withCredentialsFromProperty("first");
     Item expectedSecondItem = ItemCreator.withCredentialsFromProperty("second");
@@ -113,21 +112,5 @@ public class SistersTest extends CommonConditions{
                 .Enter()
                 .checkInvalidLoginAndPasswordInAuthorization();
         Assert.assertEquals(invalidUserLogin,"Пользователь с таким логином не зарегистирован");
-    }
-    @Test
-    public void checkSortByDescendingPriceTest(){
-        boolean correctCheck = new CatalogPage(driver)
-                .openPage(CATALOG_PAGE_URL)
-                .sortByDescendingPrice()
-                .checkCorrectSortingDescending();
-        Assert.assertTrue(correctCheck);
-    }
-    @Test
-    public void checkSortByAscendingPriceTest(){
-        boolean correctCheck = new CatalogPage(driver)
-                .openPage(CATALOG_PAGE_URL)
-                .sortByAscendingPrice()
-                .checkCorrectSortingAscending();
-        Assert.assertTrue(correctCheck);
     }
 }
