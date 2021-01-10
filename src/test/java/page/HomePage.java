@@ -47,9 +47,8 @@ public class HomePage extends AbstractPage{
         WebElement invalidLoginString = driver.findElements(By.xpath("//*[@id=\"_error-message\"]")).get(2);
         return invalidLoginString.getText();
     }
-    public String inputInSearchString(String searchItem) throws InterruptedException {
+    public String inputInSearchString(String searchItem){
         waitUntilElementIsClickable(searchString).click();
-        Thread.sleep(1000);
         waitUntilVisibilityOf(searchString).sendKeys(searchItem);
         searchString.sendKeys(Keys.ENTER);
         return searchString.getText();
